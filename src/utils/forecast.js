@@ -13,7 +13,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Coordenadas erradas!')
         } else {
             callback(undefined, 
-                `Now the weather is ${body.current.weather_descriptions[0]} with a temperature of ${body.current.temperature} degrees and a feeling of ${body.current.feelslike} degrees :)`)
+                `Now the weather is ${body.current.weather_descriptions[0]} with a temperature of ${body.current.temperature} degrees, a feeling of ${body.current.feelslike} degrees and ${body.current.humidity}% of humidity :)`)
         }
     })
 }
